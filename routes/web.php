@@ -18,5 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/post/{id}', function($id) {
-    return Post::find($id);
+    $post = Post::find($id);
+
+    return view('post')->withPost($post);
 });
