@@ -10,6 +10,8 @@ use App\Post;
 
 class ViewABlogTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * Test to see if a blog post can be seen.
      *
