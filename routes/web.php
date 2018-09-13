@@ -11,14 +11,8 @@
 |
 */
 
-use App\Post;
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post/{id}', function($id) {
-    $post = Post::find($id);
-
-    return view('post')->withPost($post);
-});
+Route::get('/post/{id}', 'PostsController@index');
