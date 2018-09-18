@@ -9,8 +9,8 @@ use App\Post;
 class PostsController extends Controller
 {
     public function index($id)
-    {        
-        $post = Post::find($id);
+    {      
+        $post = Post::findOrFail($id);
 
         return view('post')->withPost($post);
     }
