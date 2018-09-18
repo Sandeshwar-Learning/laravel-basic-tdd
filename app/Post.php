@@ -10,4 +10,13 @@ class Post extends Model
         'title',
         'body'
     ];
+
+    /**
+     * Returns formatted created_at date
+     * 
+     * @return string
+     */
+    public function createdAt() {
+        return $this->created_at->toFormattedDateString();
+    }
 }
