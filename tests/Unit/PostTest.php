@@ -28,6 +28,6 @@ class PostTest extends TestCase
         $formattedDate = $post->createdAt();
 
         // match the dates
-        $this->assertCheck($post->created_at->toFormattedDateString(), $post->createdAt());
+        $this->assertEquals($post->created_at->toFormattedDateString(), $post->createdAt());
     }
 }
