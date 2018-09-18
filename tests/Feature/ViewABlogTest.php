@@ -40,4 +40,19 @@ class ViewABlogTest extends TestCase
         // that we see published date
         $res->assertSee($post->created_at);
     }
+
+    /**
+     * Test to check if 404 is returned for invalid post ID
+     * 
+     * @group post-not-found
+     * @return void
+     */
+    public function testShow404ForInvalidPostId() 
+    {
+        // make get request with an invalid id
+        $res = $this->get('/post/INVALID_ID');
+
+        // check response status code
+        $res->assertStatus(404);
+    }
 }
