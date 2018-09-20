@@ -28,7 +28,7 @@ class ViewABlogTest extends TestCase
 
         // Action
         // visit the view post route
-        $res = $this->get("/post/{$post->id}");
+        $res = $this->get("/posts/{$post->id}");
 
         // Assert
         // reponse code 200
