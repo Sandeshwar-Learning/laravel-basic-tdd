@@ -35,7 +35,9 @@ class CreateAPostTest extends TestCase
             'body' => $post->body
         ]);
 
-        $savedPost = Post::where(['title' => $post->title]);
+        $savedPost = Post::where('title', $post->title)->first();
+
+        //fwrite(STDERR, print_r($savedPost->title, TRUE));
 
         $this->assertEquals($post->title, $savedPost->title);
     }
