@@ -13,7 +13,7 @@ class ViewAllBlogPostsTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * A basic test example.
+     * Test to check if all the blog posts are being displayed
      *
      * @group posts
      * @return void
