@@ -8,6 +8,11 @@ use App\Post;
 
 class PostsController extends Controller
 {
+    public function index()
+    {
+        return view('post.index')->withPosts(Post::all());
+    }
+
     public function show($id)
     {      
         $post = Post::findOrFail($id);
