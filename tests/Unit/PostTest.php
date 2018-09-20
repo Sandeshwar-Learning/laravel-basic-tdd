@@ -10,6 +10,8 @@ use App\Post;
 
 class PostTest extends TestCase
 {
+    use RefreshDatabase;
+    
     /**
      * Should have createdAt() which returns formatted created at date
      * 
