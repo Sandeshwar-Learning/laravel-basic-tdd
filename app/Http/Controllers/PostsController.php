@@ -14,9 +14,17 @@ class PostsController extends Controller
     }
 
     public function show($id)
-    {      
+    {
         $post = Post::findOrFail($id);
 
         return view('post')->withPost($post);
+    }
+
+    public function store()
+    {
+        Post::create([
+            'title' => request()->title,
+            'body' => request()->body
+        ]);
     }
 }
