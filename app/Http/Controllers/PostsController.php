@@ -8,7 +8,7 @@ use App\Post;
 
 class PostsController extends Controller
 {
-    public function index($id)
+    public function show($id)
     {      
         $post = Post::findOrFail($id);
 
